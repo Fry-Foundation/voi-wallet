@@ -1,0 +1,21 @@
+{
+  "name": "voi-wallet",
+  "version": "1.1.0",
+  "description": "Raw signing wallet + Playwright E2E harness for Voi Network (AVM-compatible)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test:e2e": "npx playwright test --config=e2e/playwright.config.js",
+    "test:e2e:headed": "npx playwright test --config=e2e/playwright.config.js --headed",
+    "test:e2e:debug": "npx playwright test --config=e2e/playwright.config.js --debug",
+    "test:e2e:wallet": "npx playwright test --config=e2e/playwright.config.js --grep='Wallet Connect'",
+    "test:e2e:chain": "npx playwright test --config=e2e/playwright.config.js --grep='Chain Switching'",
+    "test:e2e:swap": "npx playwright test --config=e2e/playwright.config.js --grep='DEX Swap'"
+  },
+  "dependencies": {
+    "algosdk": "2.11.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}

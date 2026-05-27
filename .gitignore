@@ -1,0 +1,10 @@
+node_modules/
+.wallets/
+*.bak.*
+e2e/screenshots/
+e2e/test-results/
+e2e/report/
+qa/evidence/
+.env
+.env.local
+*.log
