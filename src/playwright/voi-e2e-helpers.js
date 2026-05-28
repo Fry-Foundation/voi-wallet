@@ -2,12 +2,12 @@
  * Voi E2E Test Helpers — Reusable Playwright utilities for Voi dApps
  *
  * Provides chain switching, wallet connect/disconnect UI interactions,
- * and error capture utilities. Default selectors target fry.farm but
+ * and error capture utilities. Default selectors target example Voi dApps but
  * can be adapted to other Voi-enabled applications.
  */
 const { expect } = require('@playwright/test');
 
-const CHAIN_STORAGE_KEY = process.env.VOI_CHAIN_STORAGE_KEY || 'fry-farm-chain-id';
+const CHAIN_STORAGE_KEY = process.env.VOI_CHAIN_STORAGE_KEY || 'voi-chain-id';
 
 /**
  * Switch to Voi chain via the ChainSelector dropdown.
@@ -24,7 +24,7 @@ async function switchToVoiChain(page) {
 
   // Verify localStorage updated
   var chainId = await page.evaluate(function () {
-    return localStorage.getItem(window.__voiChainKey || 'fry-farm-chain-id');
+    return localStorage.getItem(window.__voiChainKey || 'voi-chain-id');
   });
   expect(chainId).toBe('voi-mainnet');
 }
@@ -41,7 +41,7 @@ async function switchToAlgorandChain(page) {
   await algoOption.click();
 
   var chainId = await page.evaluate(function () {
-    return localStorage.getItem(window.__voiChainKey || 'fry-farm-chain-id');
+    return localStorage.getItem(window.__voiChainKey || 'voi-chain-id');
   });
   expect(chainId).toBe('algorand-mainnet');
 }

@@ -11,7 +11,7 @@ const ARC0027_MOCK_PATH = path.join(__dirname, 'arc0027-mock.js');
 const LUTE_MOCK_PATH = path.join(__dirname, 'lute-mock.js');
 
 const VOI_WALLET_STORAGE_KEY = 'voi-wallet-connection';
-const CHAIN_STORAGE_KEY = process.env.VOI_CHAIN_STORAGE_KEY || 'fry-farm-chain-id';
+const CHAIN_STORAGE_KEY = process.env.VOI_CHAIN_STORAGE_KEY || 'voi-chain-id';
 
 /**
  * Inject a Voi test wallet into a Playwright page.

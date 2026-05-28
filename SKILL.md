@@ -196,6 +196,8 @@ npm run test:e2e:debug              # Playwright inspector
 | 7 | LP Farming | STUB | `07-farm.spec.js` |
 | 8 | Profile/Portfolio | STUB | `08-profile.spec.js` |
 | 9 | Pool Stats | STUB | `09-pool-stats.spec.js` |
+| 10 | Full Site Crawl | **IMPLEMENTED** (10 flows) | `10-full-crawl.spec.js` |
+| 11 | Race Conditions | **IMPLEMENTED** (23 tests) | `11-race-conditions.spec.js` |
 
 ## Claude Code Integration
 
